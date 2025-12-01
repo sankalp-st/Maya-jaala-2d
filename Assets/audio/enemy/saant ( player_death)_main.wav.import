@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://duj8vjyhkadef"
+path="res://.godot/imported/saant ( player_death)_main.wav-b8a417bbe6499fc6b1043421e8e5d8b7.sample"
+
+[deps]
+
+source_file="res://Assets/audio/enemy/saant ( player_death)_main.wav"
+dest_files=["res://.godot/imported/saant ( player_death)_main.wav-b8a417bbe6499fc6b1043421e8e5d8b7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

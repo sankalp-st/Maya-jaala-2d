@@ -1,0 +1,140 @@
+[gd_scene load_steps=17 format=3 uid="uid://cqjh7vgkexjap"]
+
+[ext_resource type="Texture2D" uid="uid://dhgpspp4bc4nl" path="res://Assets/items/Trap/Suriken.png" id="1_p3x7o"]
+[ext_resource type="Script" path="res://Scripts/items/wheel_blade.gd" id="2_7evv4"]
+[ext_resource type="AudioStream" uid="uid://ckjo46pudvmp0" path="res://Assets/audio/enemy/wheels_.wav" id="3_h8fol"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6vye"]
+atlas = ExtResource("1_p3x7o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfgwk"]
+atlas = ExtResource("1_p3x7o")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slh88"]
+atlas = ExtResource("1_p3x7o")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndjtk"]
+atlas = ExtResource("1_p3x7o")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iju74"]
+atlas = ExtResource("1_p3x7o")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqd1p"]
+atlas = ExtResource("1_p3x7o")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju08c"]
+atlas = ExtResource("1_p3x7o")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvip1"]
+atlas = ExtResource("1_p3x7o")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qa5cw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6vye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfgwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slh88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndjtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iju74")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqd1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ju08c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvip1")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wg65s"]
+radius = 17.0294
+
+[sub_resource type="Animation" id="Animation_yogm8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xooik"]
+resource_name = "wheel_dis"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7eun5"]
+_data = {
+"RESET": SubResource("Animation_yogm8"),
+"wheel_dis": SubResource("Animation_xooik")
+}
+
+[node name="Wheel Blade" type="AnimatedSprite2D"]
+visible = false
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_qa5cw")
+animation = &"moving"
+autoplay = "moving"
+frame = 3
+frame_progress = 0.510652
+script = ExtResource("2_7evv4")
+speed = 200.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_wg65s")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7eun5")
+}
+
+[node name="wheels" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h8fol")
+bus = &"sfx"
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,155 @@
+[gd_scene load_steps=12 format=3 uid="uid://w0t3y2ykfjjs"]
+
+[ext_resource type="Script" path="res://Scripts/ememy_1.gd" id="1_ekef3"]
+[ext_resource type="Texture2D" uid="uid://bll0cq55oiw4d" path="res://Assets/Enemy/Black Knife Assassins/NightBorne.png" id="1_j7mvr"]
+[ext_resource type="Script" path="res://Scripts/enemy_stateMachine.gd" id="3_5q8vg"]
+[ext_resource type="Script" path="res://Scripts/idel_enemy1.gd" id="4_2qqix"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vhpg"]
+size = Vector2(26.25, 30)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tux31"]
+radius = 7.0
+height = 24.0
+
+[sub_resource type="Animation" id="Animation_6xjiy"]
+resource_name = "Enemy_idel"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.7, 0.766667, 0.833333, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57]
+}
+
+[sub_resource type="Animation" id="Animation_cma3b"]
+resource_name = "Enemy_idel"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.166667, 0.266667, 0.366667, 0.466667, 0.566667, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_oii8t"]
+resource_name = "Enemy_run"
+length = 0.60001
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_j7mvr")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [23, 24, 25, 26, 27, 28]
+}
+
+[sub_resource type="Animation" id="Animation_h4bjq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_j7mvr")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eqmho"]
+_data = {
+"Enemy_attack": SubResource("Animation_6xjiy"),
+"Enemy_idel": SubResource("Animation_cma3b"),
+"Enemy_run": SubResource("Animation_oii8t"),
+"RESET": SubResource("Animation_h4bjq")
+}
+
+[node name="Enemy_1" type="CharacterBody2D"]
+scale = Vector2(4, 4)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_ekef3")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(-13.75, 20.5)
+target_position = Vector2(-19.5, 0)
+collision_mask = 2
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0.25, 20)
+target_position = Vector2(27.25, 0.5)
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_j7mvr")
+flip_h = true
+hframes = 23
+vframes = 5
+
+[node name="HurtBox" type="Area2D" parent="Sprite2D" groups=["HurtBox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/HurtBox"]
+position = Vector2(-2.125, 8.75)
+shape = SubResource("RectangleShape2D_3vhpg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 10.5)
+shape = SubResource("CapsuleShape2D_tux31")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_eqmho")
+}
+
+[node name="Enemy_stateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_5q8vg")
+initial_state = NodePath("idel")
+
+[node name="idel" type="Node" parent="Enemy_stateMachine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("4_2qqix")
+enemy = NodePath("../..")

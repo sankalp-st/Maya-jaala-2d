@@ -1,0 +1,770 @@
+[gd_scene load_steps=70 format=3 uid="uid://bikj3e3v5ha5c"]
+
+[ext_resource type="Texture2D" uid="uid://csktjf71ri68c" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-00.png" id="1_hg8k8"]
+[ext_resource type="Script" path="res://Scripts/Player Script/player.gd" id="1_omsvb"]
+[ext_resource type="Texture2D" uid="uid://dyb1b8i4vpufq" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-01.png" id="2_5v6cw"]
+[ext_resource type="Texture2D" uid="uid://ctgoukodiyxge" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-kick-00.png" id="2_fgqio"]
+[ext_resource type="Texture2D" uid="uid://comd1v5mr6ew2" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-02.png" id="3_62x45"]
+[ext_resource type="Texture2D" uid="uid://e6iigl7161i4" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-kick-01.png" id="3_mvmvq"]
+[ext_resource type="Texture2D" uid="uid://4iq3m3poycqg" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-kick-02.png" id="4_3700a"]
+[ext_resource type="Texture2D" uid="uid://caagwjtpluog4" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-idle-03.png" id="4_f3t6r"]
+[ext_resource type="Texture2D" uid="uid://bad5dk2kq2064" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-kick-03.png" id="5_aok1s"]
+[ext_resource type="Texture2D" uid="uid://b5a05crlhxhmv" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-kick-04.png" id="6_6jndj"]
+[ext_resource type="Texture2D" uid="uid://bil0n772yodei" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-fall-00.png" id="6_kbhri"]
+[ext_resource type="Texture2D" uid="uid://ediq01iw7ehu" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-00.png" id="6_l2w1u"]
+[ext_resource type="Texture2D" uid="uid://djrc0kh86jr6o" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-01.png" id="7_e6yeu"]
+[ext_resource type="Texture2D" uid="uid://bxcyvaxx5rpv3" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-fall-01.png" id="7_vy07e"]
+[ext_resource type="Texture2D" uid="uid://bp2ivl6vl4e28" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-kick-07.png" id="7_wujhv"]
+[ext_resource type="Texture2D" uid="uid://ed1iqqs54u4c" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-02.png" id="8_1igpl"]
+[ext_resource type="Texture2D" uid="uid://oifdj64ob3i6" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-kick-05.png" id="8_xiv6p"]
+[ext_resource type="Texture2D" uid="uid://fg4rxo0bt1al" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-kick-06.png" id="9_6rynd"]
+[ext_resource type="Texture2D" uid="uid://drj27yeeffxgc" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-jump-03.png" id="9_wac2d"]
+[ext_resource type="Texture2D" uid="uid://dh8anko0qpay" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-00.png" id="10_2vead"]
+[ext_resource type="Texture2D" uid="uid://cwfvfcsffmut2" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-05.png" id="10_5m2wi"]
+[ext_resource type="Texture2D" uid="uid://dperhl15nh2pp" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-06.png" id="11_181th"]
+[ext_resource type="Texture2D" uid="uid://gnve7m14epxx" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-01.png" id="11_vmnw5"]
+[ext_resource type="Texture2D" uid="uid://rjqsrc1jj4gl" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-02.png" id="12_ajtn8"]
+[ext_resource type="Texture2D" uid="uid://dk5jyuq4upixi" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-07.png" id="12_dks21"]
+[ext_resource type="Texture2D" uid="uid://5aib1f3833s6" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-03.png" id="13_21mah"]
+[ext_resource type="Texture2D" uid="uid://cx6fqk3qg7pkq" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-08.png" id="13_mys5o"]
+[ext_resource type="Texture2D" uid="uid://b4071p2twpolb" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-04.png" id="14_f0c2l"]
+[ext_resource type="Texture2D" uid="uid://5rrw34mn00rn" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-09.png" id="14_fqibq"]
+[ext_resource type="Texture2D" uid="uid://cse4jkpu24x20" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-10.png" id="15_7y4cu"]
+[ext_resource type="Texture2D" uid="uid://fj1bv4735v6c" path="res://Assets/Adventurer/Adventurer-1.5/Individual Sprites/adventurer-run-05.png" id="15_v6u0n"]
+[ext_resource type="Texture2D" uid="uid://2sjs14wiqk3t" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-11.png" id="16_ct8bm"]
+[ext_resource type="Texture2D" uid="uid://bdrtk51n5vnsb" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-12.png" id="17_5yo5t"]
+[ext_resource type="Script" path="res://Scripts/Player Script/idelPlayer.gd" id="18_ctc03"]
+[ext_resource type="Texture2D" uid="uid://bkab2oo27jqbm" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-drop-kick-00.png" id="18_d8xwr"]
+[ext_resource type="Script" path="res://Scripts/Player Script/state_machine.gd" id="18_rgalh"]
+[ext_resource type="Texture2D" uid="uid://d2wthf7o3vqic" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-drop-kick-01.png" id="19_4ilmk"]
+[ext_resource type="Script" path="res://Scripts/Player Script/walkplayer.gd" id="19_qr4xj"]
+[ext_resource type="Texture2D" uid="uid://dqah7jlee0ahg" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-drop-kick-02.png" id="20_c822o"]
+[ext_resource type="Texture2D" uid="uid://djps8q16e4bnq" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-drop-kick-03.png" id="21_1ie5g"]
+[ext_resource type="Texture2D" uid="uid://qxd1bcwetldt" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-knock-dwn-00.png" id="22_esfoe"]
+[ext_resource type="Texture2D" uid="uid://irokm44hliam" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-knock-dwn-01.png" id="23_ghj8i"]
+[ext_resource type="Texture2D" uid="uid://bb5vbv1ni8ulg" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-knock-dwn-02.png" id="24_etn8s"]
+[ext_resource type="Texture2D" uid="uid://c1wooe8sqckfj" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-knock-dwn-03.png" id="25_17diu"]
+[ext_resource type="Texture2D" uid="uid://dwlpjrb6wm6bo" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-knock-dwn-04.png" id="26_kl2r1"]
+[ext_resource type="Texture2D" uid="uid://bxo1av4myb3ot" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-knock-dwn-05.png" id="27_6y5b2"]
+[ext_resource type="Texture2D" uid="uid://r5rksevystml" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-knock-dwn-06.png" id="28_f2r5l"]
+[ext_resource type="Texture2D" uid="uid://cprij4smdkhc0" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-00.png" id="45_23lor"]
+[ext_resource type="Texture2D" uid="uid://djumgjtdxyuot" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-01.png" id="46_6r2gx"]
+[ext_resource type="Texture2D" uid="uid://wqepicvq8gtb" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-02.png" id="47_0h0nt"]
+[ext_resource type="Texture2D" uid="uid://ceex4bevrd3q3" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-03.png" id="48_8druc"]
+[ext_resource type="Texture2D" uid="uid://eqpp57co458u" path="res://Assets/Adventurer/Adventurer-Hand-Combat/Individual Sprites/adventurer-punch-04.png" id="49_npr18"]
+[ext_resource type="Script" path="res://Scripts/Player Script/singlePunch.gd" id="53_erfkx"]
+[ext_resource type="Script" path="res://Scripts/Player Script/douPunch.gd" id="54_3sdua"]
+[ext_resource type="Script" path="res://Scripts/Player Script/kick.gd" id="55_gwpid"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qeulf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fgqio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mvmvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3700a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aok1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6jndj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wujhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xiv6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6rynd")
+}],
+"loop": true,
+"name": &"2_kick",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_5m2wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_181th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dks21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mys5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fqibq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7y4cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ct8bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5yo5t")
+}],
+"loop": true,
+"name": &"double_punch",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_d8xwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4ilmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_c822o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1ie5g")
+}],
+"loop": true,
+"name": &"drop_kick",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_esfoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ghj8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_etn8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_17diu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_kl2r1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_6y5b2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_f2r5l")
+}],
+"loop": true,
+"name": &"knock_down",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hg8k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5v6cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_62x45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f3t6r")
+}],
+"loop": true,
+"name": &"player_idel",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_kbhri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vy07e")
+}],
+"loop": true,
+"name": &"player_inair",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_l2w1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_e6yeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1igpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wac2d")
+}],
+"loop": false,
+"name": &"player_jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_2vead")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vmnw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ajtn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_21mah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_f0c2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v6u0n")
+}],
+"loop": true,
+"name": &"player_run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_23lor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_6r2gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_0h0nt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_8druc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_npr18")
+}],
+"loop": true,
+"name": &"punch_1",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37ctg"]
+size = Vector2(16.5, 12.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xty6s"]
+radius = 5.0
+height = 27.0
+
+[sub_resource type="Animation" id="Animation_hk3xe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"player_idel"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D/hitbox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StateMachine/singlePunch:attack")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StateMachine/douPunch:attack")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StateMachine/kick:attack")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_uug8a"]
+resource_name = "dou_kick"
+length = 0.70001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"2_kick"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 5, 6, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StateMachine/kick:attack")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D/hitbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_43ydo"]
+resource_name = "dou_punch"
+length = 0.70001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"double_punch"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D/hitbox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StateMachine/douPunch:attack")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"ready_for_input"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_bcu07"]
+resource_name = "drop_kick"
+length = 0.40001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"drop_kick"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_sfyv2"]
+resource_name = "fall"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"player_inair"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_67wqh"]
+resource_name = "idel_player"
+length = 0.60002
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"player_idel"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_8kocs"]
+resource_name = "jump"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"player_jump"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_1yln1"]
+resource_name = "knock_down"
+length = 0.70001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"knock_down"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_a2gwq"]
+resource_name = "single_punch"
+length = 0.50001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"punch_1"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D/hitbox/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StateMachine/singlePunch:attack")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"ready_for_input"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StateMachine/singlePunch")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"enable_attack2"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_23gww"]
+resource_name = "walk"
+length = 0.56667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"player_run"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ppric"]
+_data = {
+"RESET": SubResource("Animation_hk3xe"),
+"dou_kick": SubResource("Animation_uug8a"),
+"dou_punch": SubResource("Animation_43ydo"),
+"drop_kick": SubResource("Animation_bcu07"),
+"fall": SubResource("Animation_sfyv2"),
+"idel_player": SubResource("Animation_67wqh"),
+"jump": SubResource("Animation_8kocs"),
+"knock_down": SubResource("Animation_1yln1"),
+"single_punch": SubResource("Animation_a2gwq"),
+"walk": SubResource("Animation_23gww")
+}
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_omsvb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.5, 0)
+sprite_frames = SubResource("SpriteFrames_qeulf")
+animation = &"player_idel"
+
+[node name="hitbox" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/hitbox"]
+position = Vector2(12.75, 2)
+shape = SubResource("RectangleShape2D_37ctg")
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_xty6s")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("18_rgalh")
+initial_state = NodePath("idel")
+
+[node name="idel" type="Node" parent="StateMachine"]
+script = ExtResource("18_ctc03")
+
+[node name="movement" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+script = ExtResource("19_qr4xj")
+player = NodePath("../..")
+
+[node name="singlePunch" type="Node" parent="StateMachine"]
+script = ExtResource("53_erfkx")
+
+[node name="douPunch" type="Node" parent="StateMachine"]
+script = ExtResource("54_3sdua")
+
+[node name="kick" type="Node" parent="StateMachine"]
+script = ExtResource("55_gwpid")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ppric")
+}
+
+[connection signal="area_entered" from="AnimatedSprite2D/hitbox" to="StateMachine/singlePunch" method="_on_hitbox_area_entered"]
+[connection signal="area_entered" from="AnimatedSprite2D/hitbox" to="StateMachine/douPunch" method="_on_hitbox_area_entered"]
